@@ -1,1 +1,1 @@
-import psycopg2
+from extentions import db
