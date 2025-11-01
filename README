@@ -1,16 +1,14 @@
-This project has been developed by personal purposes.
+# Guess the riddle 
+
 
 It consists of an interactive web application with a mini game, that records the results of any game played of "guess the riddle" during the session.
-Before starting the game, the user has to enter a name, even fake if he wish. The user is warned about the store of the 
-user name in a database for 90 days, after that is deleted. The web page also recommend to not provide personal information.
+Before starting the game, the user has to enter a name, even fake if he wish. The user is warned about the store of the user name in a database for 90 days, after that is deleted. 
+The web page also recommend to not provide personal information.
 
-The web application system is based on a three-tier architecture (Frontend, Backend and Database). 
+How to play?
 
-🖥️ The frontend is based on HTML, CSS and JavaScript, using React as a framework during the development (.JSX files).
+Is very simple! Choose the difficulty and ask for a new riddle ! 
 
-⚙️ The backend is based on a REST API flask written in python and provides all the necessary routines under the endpoints for the game and the registration of the users and their games.
-
-💾 The database used is Postgres and it contains a single table with id, username, date of the game, games played and games won.
 
 
 
