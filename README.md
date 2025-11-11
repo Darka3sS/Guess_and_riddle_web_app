@@ -23,8 +23,8 @@ Responsive Design: Built with React, it works beautifully on both desktop and mo
 ## Technical stack 🛠️
 This project is a full-stack application composed of:
 
-* Frontend: React
-* Backend: Flask (Python)
+* Frontend: React + Nginx
+* Backend: Flask (Python) REST API
 * AI: Google Gemini API
 * Database: PostgreSQL 
 * Hosting: Self-hosting on a RHEL machine in cloud.
