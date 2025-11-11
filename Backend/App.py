@@ -3,6 +3,8 @@ from flask_sqlalchemy import SQLAlchemy
 from config import Config
 from extentions import db
 from flask_migrate import Migrate
+from routes import main_routes
+from flask_cors import CORS
 
 
 def create_app():
@@ -12,11 +14,9 @@ def create_app():
     db.init_app(app)
     migrate = Migrate(app, db)
 
-    # Importa le routes dopo per evitare import circolari
-    from . import routes
+    CORS(app)
 
-    # Registra i blueprints se ne hai
-    # app.register_blueprint(...)
+    app.register_blueprint(main_routes)
 
     return app
 

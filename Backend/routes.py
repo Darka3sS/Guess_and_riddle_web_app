@@ -1,17 +1,27 @@
 from flask import Blueprint, request, jsonify, render_template
 from extentions import db
-from models.partite_model import Partite
+from models.partite_model import partite
 from google import genai
 from utils import Livello
+import os
+from dotenv import load_dotenv
 
-client = genai.Client()
+load_dotenv(".env")
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+
+client = genai.Client(api_key=GEMINI_API_KEY)
 
 main_routes = Blueprint("main", __name__)
 
 
 @main_routes.route("/home", methods=["GET"])
 def index():
-    return render_template("index.html")
+    return jsonify(
+        {
+            "message": "Ciao! L'API del Backend è attiva e funzionante!",
+            "status": "success",
+        }
+    )
 
 
 @main_routes.route("/api/AI_indovinello", methods=["GET"])
